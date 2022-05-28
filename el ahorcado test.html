@@ -1,0 +1,68 @@
+<body>
+    <p>Hola Mundo</p>
+    <textarea class="eltexto" id="eltexto"></textarea>
+    <textarea class = "lapalabra" id="lapalabra"></textarea>
+    <script>
+
+        let elcuerpo = document.querySelector("body");
+        let eltexto = document.querySelector ("#eltexto");
+        let eltextoPalabra = document.querySelector ("#lapalabra");
+        let toytyping = [];
+        let palabra = "dominican republic";
+        let palabramuestra = [];
+
+        function palabraarray (cantidad){
+            for (x=0; x<palabra.length;x++){
+            palabramuestra.push ("");
+            }
+        }
+        palabraarray();
+
+        elcuerpo.addEventListener ("keydown", function (event){
+            let theletter = event.key;
+           // alert ("hiciste click");
+           if(toytyping.indexOf(event.key.toString())>=0){
+               alert("key already used");
+            }else{
+            console.log (theletter + " added");
+            toytyping.push (theletter);
+            eltexto.textContent = toytyping.toString().replaceAll (",","");
+            }
+
+            
+            if (palabra.indexOf (theletter)<0){
+                alert("te ta muriendo");
+           
+            }else{
+                let x=0;
+                let y=0;
+
+                do {
+                    x = palabra.indexOf(theletter, y);
+                    if(x<0){
+                        x=-1;
+                    } else if (x >= 0 || palabramuestra [x]== ""){
+                    console.log (x + "x");
+                    palabramuestra.splice(x,1,theletter);
+                    y=y+1;
+                    }
+                }while (x >=0);
+
+                eltextoPalabra.textContent = palabramuestra;
+            }
+        
+        let lapalabranueva = palabramuestra.toString().replaceAll (",","");
+        console.log (lapalabranueva);
+
+        if (palabra == lapalabranueva){
+            alert("has ganado, la palabra era "+lapalabranueva);
+
+        }
+            
+        });
+
+
+    </script>
+ </body>
+
+</html>

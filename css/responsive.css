@@ -1,0 +1,641 @@
+﻿/*Desafio Style*/
+body {
+    background: #E5E5E5;
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+.munheco {
+    display:none;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+}
+
+.logo {
+    margin-top: 0.5vh;
+    width: 4vh;
+    margin-left: 2vh;
+    margin-bottom: 10px;
+}
+
+.inputsection {
+    display: inline-block;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    height: 50%;
+    left: 20px;
+   
+}
+
+.outputsection {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    height: 30%;
+    top: 62%;
+    /* White */
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+
+}
+
+
+.txt_toencrypt {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 24px;
+    border: none;
+    width: 95%;
+    height: 40%;
+    background: #E5E5E5;
+    color: #0A3871;
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Inter';
+    text-transform: lowercase;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+.txt_toencryp:active{
+    border:3px solid #E5E5E5;
+
+}
+
+.txt_encrypted {
+    position: relative;
+    margin: 0 auto;
+    padding: 25px 0;
+    border-radius: 24px;
+    width: 85%;
+    height: 90px;
+    border: none;
+    background: white;
+    color: #0A3871;
+    text-align: center;
+    font-size: larger;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
+    align-items: center;
+}
+
+.munheco {
+    width: 50%;
+    margin-top: 20px;
+}
+
+.encrypt_button {
+    /* Auto layout */
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    width: 90%;
+    height: 67px;
+    background: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+    color: white;
+}
+
+.decrypt_button {
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    height: 67px;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.copy_button {
+    display: normal;
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    width: 90%;
+    height: 67px;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.thide {
+    display: none;
+}
+
+.infoIcon {
+    width: 10px;
+}
+
+.infoIcon:hover {
+        color: white;
+        width: 15px;
+}
+
+.info:hover + .thide {
+    display: block;
+    color: #0A3871;
+}
+
+.info {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.copy_button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.encrypt_button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 5s scale (1.2);
+}
+
+.decrypt_button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 5s scale (1.2);
+}
+
+a:link, a:visited {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+.finalmessage {
+    display: none;
+    transition: 5s scale (1.2);
+}
+
+
+.outpuldiv {
+    display: flow;
+    margin-top: 22%;
+    transition: 5s scale (1.2);
+}
+
+@media only screen and (min-width: 768px){
+    header {
+        position: fixed;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        left: 24px;
+    }
+
+    .logo {
+        margin-top: 0.5vh;
+        width: 4vh;
+        margin-left: 2vh;
+        margin-bottom: 10px;
+    }
+
+    body {
+        background: #E5E5E5;
+        font-family: 'Inter';
+        font-style: normal;
+        display: flex;
+    }
+
+    .inputsection {
+        align-items: center;
+        top: 120px;
+        position: absolute;
+        text-align: center;
+        align-items: center;
+        width: 95%;
+        height: 60%;
+        left: 20px;
+  
+    }
+
+    .outputsection {
+        /* Frame 5 */
+        /* Auto layout */
+        position:absolute;
+        align-items: center;
+        position: absolute;
+        text-align: center;
+        align-items: center;
+        width: 95%;
+        height: 25%;
+        left: 13px;
+        top: 70%;
+        /* White */
+        background: #FFFFFF;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 32px;
+        left: 20px;
+        right: 24px;
+    }
+
+
+    .txt_toencrypt {
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 24px;
+        border: solid #E5E5E5;
+        width: 95%;
+        height: 70%;
+        background: #E5E5E5;
+        color: #0A3871;
+        text-align: center;
+        font-size: xx-large;
+        font-family: 'Inter';
+        text-transform: lowercase;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+    }
+
+    .txt_encrypted {
+        display: block;
+        margin-top: 20px;
+        border-radius: 24px;
+        width: 90%;
+        height: 100px;
+        border: none;
+        background: white;
+        color: #0A3871;
+        text-align: center;
+        font-size: larger;
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+        word-break: break-word;
+        word-wrap: break-word;
+        align-items: center;
+    }
+
+    .munheco {
+        width: 50%;
+        margin-top: 20px;
+    }
+
+
+    #outpuldiv h1 {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .buttonsInput {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        margin-left: 40px;
+    }
+    .decrypt_button {
+        flex-direction: row;
+        align-items: center;
+        width: 40%;
+        height: 67px;
+        background: #D8DFE8;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        margin-bottom: 24px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+    }
+
+    .encrypt_button {
+        /* Auto layout */
+        flex-direction: row;
+        align-items: center;
+        position: static;
+        width: 40%;
+        height: 67px;
+        background: #0A3871;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        margin-bottom: 24px;
+        text-align: center;
+        color: white;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .copy_button {
+        display: normal;
+        flex-direction: row;
+        align-items: center;
+        position: static;
+        width: 90%;
+        height: 67px;
+        background: #D8DFE8;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .thide {
+        display: none;
+    }
+
+    .infoIcon {
+        width: 10px;
+    }
+
+        .infoIcon:hover {
+            color: white;
+            width: 15px;
+        }
+
+    .info:hover + .thide {
+        display: block;
+        color: #0A3871;
+    }
+
+    .info {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #495057;
+        opacity: 0.8;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    .copy_button:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    .encrypt_button:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    .decrypt_button:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    a:link, a:visited {
+        color: black;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .finalmessage {
+        display: none;
+        transition: 0.5ms;
+    }
+
+
+    .outpuldiv {
+       display: flow;
+        margin-top: 10%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .munheco {
+        display: block;
+        align-items: center;
+        margin-top: 20px;
+        width: 80%;
+        margin-left: 20px;
+    }
+
+    header {
+        position: fixed;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        margin-top: 0.5vh;
+        width: 5vh;
+        margin-left: 2vh;
+        margin-bottom: 10px;
+    }
+
+    body {
+        background: #E5E5E5;
+        font-family: 'Inter';
+        font-style: normal;
+        display: flex;
+    }
+
+    .inputsection {
+        align-items: center;
+        top: 120px;
+        position: fixed;
+        text-align: center;
+        align-items: center;
+        width: 60%;
+        height: 80%;
+        margin-left: 70px;
+        border:none;
+    }
+
+    .finalmessage {
+        display: none;
+        transition: 0.5ms;
+    }
+
+    .outpuldiv {
+        display: flow;
+        margin-top: 50%;
+    }
+
+    .outputsection {
+        /* Frame 5 */
+        /* Auto layout */
+        display: block;
+        position: initial;
+        margin-top: 120px;
+        align-items: center;
+        text-align: center;
+        width: 20%;
+        height: 80vh;
+        margin-left: 75%;
+        /* White */
+        background: #FFFFFF;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 32px;
+        left: 20px;
+        right: 24px;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .txt_toencrypt {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        border-radius: 24px;
+        border: solid #E5E5E5;
+        width: 95%;
+        height: 70%;
+        background: #E5E5E5;
+        color: #0A3871;
+        text-align: center;
+        font-size: xx-large;
+        font-family: 'Inter';
+        text-transform: lowercase;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+    }
+
+    .txt_encrypted {
+        margin-top: 15%;
+        border-radius: 24px;
+        width: 95%;
+        height: 60vh;
+        border: none;
+        background: white;
+        color: #0A3871;
+        text-align: center;
+        font-size: larger;
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+        word-break: break-word;
+        word-wrap: break-word;
+        align-items: center;
+    }
+
+
+    .encrypt_button {
+        /* Auto layout */
+        flex-direction: row;
+        align-items: center;
+        position: static;
+        width: 80%;
+        height: 67px;
+        background: #0A3871;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        margin-bottom: 24px;
+        text-align: center;
+        color: white;
+    }
+
+    .buttonsInput{
+
+        align-items: center;
+        width:80%;
+        margin-left: 100px
+
+    }
+    .decrypt_button {
+        flex-direction: row;
+        align-items: center;
+        width: 80%;
+        height: 67px;
+        background: #D8DFE8;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .copy_button {
+        display: normal;
+        flex-direction: row;
+        align-items: center;
+        position: static;
+        width: 90%;
+        height: 67px;
+        background: #D8DFE8;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .thide {
+        display: none;
+    }
+
+    .infoIcon {
+        width: 10px;
+    }
+
+        .infoIcon:hover {
+            color: white;
+            width: 15px;
+        }
+
+    .info:hover + .thide {
+        display: block;
+        color: #0A3871;
+    }
+
+    .info {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #495057;
+        opacity: 0.8;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    .copy_button:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    .encrypt_button:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    .decrypt_button:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    a:link, a:visited {
+        color: black;
+        text-align: center;
+        text-decoration: none;
+    }
+
+   
+
+}

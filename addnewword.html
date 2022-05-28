@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" , initial-scale="1.0" charset="utf-8" />
+        <title>Ahorcado|Nueva Palabra</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="img/iconoAhorcado.png" type="image/icon type">
+    </head>
+    <header>
+        <div class="logo">
+            <img class="logo" src="E:/Programacion/Desafios/segundo Desafio/img/Vector.png" alt="logo" />
+        </div>
+    </header>
+    <body>
+            <div class="body">
+            <section class="inputsection">
+                <textarea type="text" class="txt_toencrypt" id="txt_toencrypt" style="text-align:center" placeholder="Agrege la palabra nueva aqui..."></textarea>
+                <div class="info">
+                    <a href="https://en.wikipedia.org/wiki/List_of_Unicode_characters" target="_blank">
+                        <img class="infoIcon" src="E:/Programacion/Desafios/Primer Desafio/img/Vector (1).png" alt="logo" />
+                        Solo letras minúsculas y sin acentos
+                    </a>
+                </div>
+                <div class="buttonsInput">
+                    <button  class="encrypt_button" id="bt_saveword" onclick = "saveword ()">Guardar Palabra</button>
+                    <button  class="decrypt_button" id="bt_start_game" onclick = "newpage ()">Iniciar Juego</button>
+                </div>
+            </section>
+            </div>
+         <script src="js/script.js"></script>
+    </body>
+</html>
