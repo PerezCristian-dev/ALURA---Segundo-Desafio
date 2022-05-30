@@ -1,13 +1,13 @@
 
 let newwordbutton = document.querySelector(".bt_add_word");
 newwordbutton.addEventListener("click",function newpage (){
-    window.location.href = "file:///E:/Programacion/Desafios/Segundo%20Desafio/addnewword.html"
+    window.location.href = "file://addnewword.html"
 });
 
 let startbutton = document.querySelector(".bt_start_game");
 startbutton.addEventListener("click",function newpage (){
 
-    window.location.href = "file:///E:/Programacion/Desafios/Segundo%20Desafio/game.html"
+    window.location.href = "file://game.html"
     //prompt("Please select a topic", "1: Countries, 2: Programing Lenguage")
     //window.location.href = "file:///E:/Programacion/Desafios/Segundo%20Desafio/addnewword.html"
 });
@@ -15,7 +15,7 @@ startbutton.addEventListener("click",function newpage (){
 
 let newgame = document.getElementById("#bt_start_game");
 function newpage (){
-    window.location.href = "file:///E:/Programacion/Desafios/Segundo%20Desafio/game.html"
+    window.location.href = "file://game.html"
     //prompt("Please select a topic", "1: Countries, 2: Programing Lenguage")   //window.location.href = "file:///E:/Programacion/Desafios/Segundo%20Desafio/addnewword.html"
 };
 
