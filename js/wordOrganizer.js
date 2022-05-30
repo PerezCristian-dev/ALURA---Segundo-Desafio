@@ -84,7 +84,7 @@ function acknoledge (){
 
 function playagain (){
 
-    window.location.href = "file:///E:/Programacion/Desafios/Segundo%20Desafio/game.html"
+    window.location.href = "https://perezcristian-dev.github.io/ALURA---Segundo-Desafio/game.html"
     elcuerpo.addEventListener ("keydown", evento);
 }
 
@@ -128,7 +128,7 @@ let evento = function (event){
             addParts (); 
             if(times==11){
                 var alerta = new customAlert ()
-                alerta.render("Te Han Ahorcado!!!  </br> La palabra correcta era</br></br>" + palabra.toUpperCase()+ '</br></br><img height = 200px src= "images/dead'+Math.round(Math.random()*3)+'.gif">', "playagain");
+                alerta.render("Te Han Ahorcado!!!  </br> La palabra correcta era</br></br>" + palabra.toUpperCase()+ '</br></br><img height = 200px src= "img/dead'+Math.round(Math.random()*3)+'.gif">', "playagain");
             }   
         }else{
             let x=0;
@@ -152,7 +152,7 @@ let evento = function (event){
                 console.log (lapalabranueva);
                 if (palabra == lapalabranueva){
                     var alerta = new customAlert ()
-                    alerta.render("Has ganado, la palabra correcta era </br></br>" + palabra.toUpperCase() +'</br></br><img height = 100px src= "images/'+palabra.toLowerCase()+'.png">', "playagain"); 
+                    alerta.render("Has ganado, la palabra correcta era </br></br>" + palabra.toUpperCase() +'</br></br><img height = 100px src= "img/'+palabra.toLowerCase()+'.png">', "playagain"); 
                     elcuerpo.removeEventListener ("keydown", evento);
                         }
                     }   
@@ -166,12 +166,12 @@ elcuerpo.addEventListener ("keydown", evento);
 let startbutton = document.querySelector(".encrypt_button");
 startbutton.addEventListener("click",function newpage (){
 
-    window.location.href = "file:///E:/Programacion/Desafios/Segundo%20Desafio/game.html"
+    window.location.href = "https://perezcristian-dev.github.io/ALURA---Segundo-Desafio/game.html"
     //prompt("Please select a topic", "1: Countries, 2: Programing Lenguage")
     //window.location.href = "file:///E:/Programacion/Desafios/Segundo%20Desafio/addnewword.html"
 });
 
 let terminar = document.getElementById ("desistir");
 terminar.addEventListener ("click", function(){
-    window.location.href = "file:///E:/Programacion/Desafios/Segundo%20Desafio/thankyouforplaying.html"
+    window.location.href = "https://perezcristian-dev.github.io/ALURA---Segundo-Desafio/thankyouforplaying.html"
 });
